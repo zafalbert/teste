@@ -21,8 +21,6 @@ COPY . .
 RUN composer install --no-dev --optimize-autoloader && \
     npm install && npm run build
 
----
-
 # Étape 2 : Runtime - Apache avec PHP
 FROM php:8.2-apache
 
