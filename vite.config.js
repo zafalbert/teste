@@ -13,7 +13,7 @@ export default defineConfig({
             },
           },
         },*/
-    
+     base: process.env.ASSET_URL ? new URL(process.env.ASSET_URL).origin + '/' : '/',
     plugins: [
         laravel({
             input: [
