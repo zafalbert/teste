@@ -1,0 +1,40 @@
+.contact-container {
+  overflow: visible; /* Supprime le scroll en rendant le contenu visible */
+  padding: 8px;
+  font-size: 12px;
+  height: 90vh;
+  
+}
+
+.liste {
+  margin-top: 1.8rem;
+  overflow: visible; /* Ajouté : Pour permettre le défilement horizontal uniquement pour la table */
+}
+
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+
+.contact-table th,
+.contact-table td {
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+@media (max-width: 700px) {
+  .contact-table {
+    font-size: 9px; /* Réduit la taille de la police sur les petits écrans */
+  }
+}
+.modal-dialog-slide {
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  transform: scale(0.7);
+  opacity: 0;
+}
+
+.modal-dialog-slide.show {
+  transform: scale(1);
+  opacity: 1;
+}

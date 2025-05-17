@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    font-family: "Inria Sans", system-ui;
+    font-weight: 450;
+    font-style: normal;
+    
+}
+
+/* Ajustement de la hauteur */
+.sidebar {
+    padding: 8px;
+    font-size: 15px;
+    height: 90vh;
+    background: #5D8AA8;
+}
+
+  
+/* Style par défaut sans bordure 
+.sidebar .btn-outline-primary {
+    border: none;
+    color: #007bff;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+    */
+  
+  /* Appliquer une bordure et changer la couleur au survol 
+  .sidebar .btn-outline-primary:hover {
+    padding: 6.5px;
+    border: 2px solid #00d9ff;
+    background-color: rgba(8, 236, 84, 0.637); /* Légère couleur de fond lors du hover */
+    /*color: #fff; /* Changer la couleur du texte sur hover 
+  }
+  
+
+/* Effet hover de fond gris sur la liste */
+/* .sidebar-nav .nav-link:hover {
+    color: white;
+}
+
+.sidebar-nav .nav-item {
+    color: aliceblue;
+    
+}
+
+.sidebar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    width: 100%;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    
+}
+
+.sidebar-nav .nav-link i {
+    margin-right: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Effet hover sur la liste */
+
+/* .sidebar-nav .nav-link:hover i {
+    color: white; /* Couleur de l'icône en blanc au hover */
+/* }
+
+.sidebar-nav .nav-link:focus {
+    outline: none;
+}  */
+
+.sidebar {
+    background-color: #f8f9fa;
+    color: #495057;
+  }
+  
+ 
+  .nav-link {
+    color: #495057;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .nav-link:hover, .active-link {
+    background-color: #72A0C1;
+    color: #fff !important;
+    border-radius: 5px;
+  }
+  
+  .text-secondary {
+    font-weight: bold;
+    font-size: 0.75rem;
+  }
+  

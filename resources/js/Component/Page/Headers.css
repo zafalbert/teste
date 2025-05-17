@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    /*font-family: "Inria Sans", system-ui;*/
+    font-weight: 700;
+    font-style: normal;
+}
+
+.header {
+  background-color: #f8f9fa;
+  color: #495057;
+}
+
+
+.header-nav .liste {
+  color: #495057;
+}
+
+.header-nav .nav-item {
+    display: flex;
+    align-items: center;
+    color: #495057;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    width: 100%;
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo .bi-list {
+    font-size: 1.5rem; /* Augmente la taille de l'icône */
+    color: #495057; /* Couleur de l'icône */
+    margin-left: 40px; /* Ajustez l'espacement à droite de "Super Admine" */
+    cursor: pointer;
+}
+
+.header-nav .nav-item i {
+    margin-right: 10px;
+    transition: color 0.3s ease;
+    font-weight: 700;
+}
+
+.notifications {
+  min-width: 350px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.notification-item {
+  padding: 1rem !important;
+  white-space: normal !important;
+  border-bottom: 1px solid #495057;
+}
+
+.notification-item:hover {
+  background-color: #b8c0c7 !important;
+}
+
+/* .notification-item h6 {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.notification-item p {
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+} */
+
+.dropdown-header {
+  font-weight: 600;
+  background-color: #a7cef5;
+}
+
+.notifications {
+  min-width: 350px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* .notification-item {
+  padding: 1rem !important;
+  white-space: normal !important;
+  border-bottom: 1px solid #eee;
+} */
+
+/* .notification-item:hover {
+  background-color: #495057 !important;
+} */
+
+/* .notification-item h6 {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+} */
+
+.notification-item p {
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.dropdown-header {
+  font-weight: 600;
+  background-color: #92c4f5;
+  color: #fff;
+}
+.badge.bg-danger.badge-number {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 50%;
+  background-color: #dc3545 !important;
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.notifications.dropdown-menu {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  width: 400px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+/**********************STYLE VAOVAO *************************/
+.notification-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  transition: background-color 0.3s ease;
+}
+
+.notification-item:hover {
+  background-color: #f8f9fa;
+}
+
+.notification-item .bi {
+  font-size: 1.5rem;
+  color: #b9bfc4;
+  margin-right: 1rem;
+}
+
+.notification-item .content {
+  flex: 1;
+}
+
+.notification-item .content h6 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.notification-item .content p {
+  font-size: 0.85rem;
+  color: #bbc5ce;
+  margin-bottom: 0;
+}
