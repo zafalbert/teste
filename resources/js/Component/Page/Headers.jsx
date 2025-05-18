@@ -7,11 +7,8 @@ import { FaSignOutAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Dropdown } from 'react-bootstrap';
 import { useNotifications } from '../NotificationContext';
-import logoAdmine from '../Image/crm-logo.png';
-import logoAdmine2 from '../Image/Image1.png';
 
 function Headers({ toggleSidebar }) {
-  
   const [taches, setTaches] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -37,10 +34,6 @@ function Headers({ toggleSidebar }) {
 
   const handleTaskClick = async (tache) => {
     try {
-      // Marquer la tâche comme vue
-      //await markTaskAsViewed(tache.id);
-      
-      // Ouvrir l'agenda dans un nouvel onglet si nécessaire
       if (tache.lien_angenda) {
         window.open(tache.lien_angenda, '_blank');
       }
@@ -50,7 +43,6 @@ function Headers({ toggleSidebar }) {
   };
 
   const renderTaskContent = () => {
-    // Utilisez newTasks au lieu de taches
     if (newTasks.length === 0) {
       return <Dropdown.Item>Aucune tâche à afficher</Dropdown.Item>;
     }
@@ -62,15 +54,10 @@ function Headers({ toggleSidebar }) {
         className="notification-item"
         onClick={() => handleTaskClick(tache)}
       >
-      <h6><strong>Intitulé:</strong> <span className='text-success'>{tache.intitule}</span></h6>
-        <p className="mb-1"><strong>Intervenant:</strong> <span className='text-success'>{tache.nom}</span> </p>
+        <h6><strong>Intitulé:</strong> <span className='text-success'>{tache.intitule}</span></h6>
+        <p className="mb-1"><strong>Intervenant:</strong> <span className='text-success'>{tache.nom}</span></p>
         <p className="mb-1"><strong>Date prévue:</strong> {tache.date_prevus}</p>
-        <p className="mb-1">
-          <strong>Agenda:</strong>{' '}
-          <span className="cursor-pointer">
-            {tache.lien_angenda}
-          </span>
-        </p>
+        <p className="mb-1"><strong>Agenda:</strong> <span>{tache.lien_angenda}</span></p>
         {index < taches.length - 1 && <hr className="my-2" />}
       </Dropdown.Item>
     ));
@@ -80,28 +67,29 @@ function Headers({ toggleSidebar }) {
     <header 
       className='header fixed-top d-flex align-items-center justify-content-between px-3' 
       id='header'
-      style={{height: '11vh'}}
+      style={{ height: '11vh' }}
     >
-      <div className="logo d-flex align-items-center" style={{gap: '1.5rem'}}>
+      <div className="logo d-flex align-items-center" style={{ gap: '1.5rem' }}>
         <a href="#" className="d-flex align-items-center text-decoration-none mt-1">
           <img 
-            src={logoAdmine} 
+            src="/crm-logo.png" 
             alt="Logo" 
-            style={{width: 100, height: 65,}} 
+            style={{ width: 100, height: 65 }} 
           />
-          <span className='text-primary ms-2' style={{fontSize:'1.5rem',fontWeight: '350'}}>CRM</span>
+          <span className='text-primary ms-2' style={{ fontSize: '1.5rem', fontWeight: '350' }}>CRM</span>
         </a>
         <i 
           className='bi bi-list toggle-sidebar-btn text-dark' 
-          style={{cursor: 'pointer'}} 
+          style={{ cursor: 'pointer' }} 
           onClick={toggleSidebar}
         >
           <img 
-            src={logoAdmine2} 
+            src="/Image1.png" 
             alt="Logo" 
-            style={{width: 100, height: 85,}}
+            style={{ width: 100, height: 85 }}
             className='mt-2' 
-          /></i> 
+          />
+        </i> 
       </div>
 
       <nav className="header-nav">
@@ -126,7 +114,6 @@ function Headers({ toggleSidebar }) {
                 {renderTaskContent()}
               </Dropdown.Menu>
             </Dropdown>
-            
           </li>
 
           <li className="nav-item p-3">
