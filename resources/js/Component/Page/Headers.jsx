@@ -54,18 +54,10 @@ function Headers({ toggleSidebar }) {
         className="notification-item"
         onClick={() => handleTaskClick(tache)}
       >
-        <h6>
-          <strong>Intitulé:</strong> <span className='text-success'>{tache.intitule}</span>
-        </h6>
-        <p className="mb-1">
-          <strong>Intervenant:</strong> <span className='text-success'>{tache.nom}</span>
-        </p>
-        <p className="mb-1">
-          <strong>Date prévue:</strong> {tache.date_prevus}
-        </p>
-        <p className="mb-1">
-          <strong>Agenda:</strong> <span>{tache.lien_angenda}</span>
-        </p>
+        <h6><strong>Intitulé:</strong> <span className='text-success'>{tache.intitule}</span></h6>
+        <p className="mb-1"><strong>Intervenant:</strong> <span className='text-success'>{tache.nom}</span></p>
+        <p className="mb-1"><strong>Date prévue:</strong> {tache.date_prevus}</p>
+        <p className="mb-1"><strong>Agenda:</strong> <span>{tache.lien_angenda}</span></p>
         {index < taches.length - 1 && <hr className="my-2" />}
       </Dropdown.Item>
     ));
@@ -86,12 +78,12 @@ function Headers({ toggleSidebar }) {
           />
           <span className='text-primary ms-2' style={{ fontSize: '1.5rem', fontWeight: '350' }}>CRM</span>
         </a>
-        {/* Utilisation de l'icône Bootstrap pour le toggle */}
+        {/* Toggle Sidebar with icon */}
         <i 
           className='bi bi-list toggle-sidebar-btn text-dark fs-3' 
           style={{ cursor: 'pointer' }} 
           onClick={toggleSidebar}
-        ></i>
+        />
       </div>
 
       <nav className="header-nav">
@@ -103,6 +95,7 @@ function Headers({ toggleSidebar }) {
                 id="notification-dropdown" 
                 className="bg-transparent border-0 text-dark"
               >
+                {/* Notification icon */}
                 <i className="bi bi-bell" style={{ marginRight: 5, fontWeight: 700 }}></i>
                 {newTasks.length > 0 && (
                   <span className="badge bg-danger badge-number">{newTasks.length}</span>
