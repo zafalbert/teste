@@ -54,10 +54,18 @@ function Headers({ toggleSidebar }) {
         className="notification-item"
         onClick={() => handleTaskClick(tache)}
       >
-        <h6><strong>Intitulé:</strong> <span className='text-success'>{tache.intitule}</span></h6>
-        <p className="mb-1"><strong>Intervenant:</strong> <span className='text-success'>{tache.nom}</span></p>
-        <p className="mb-1"><strong>Date prévue:</strong> {tache.date_prevus}</p>
-        <p className="mb-1"><strong>Agenda:</strong> <span>{tache.lien_angenda}</span></p>
+        <h6>
+          <strong>Intitulé:</strong> <span className='text-success'>{tache.intitule}</span>
+        </h6>
+        <p className="mb-1">
+          <strong>Intervenant:</strong> <span className='text-success'>{tache.nom}</span>
+        </p>
+        <p className="mb-1">
+          <strong>Date prévue:</strong> {tache.date_prevus}
+        </p>
+        <p className="mb-1">
+          <strong>Agenda:</strong> <span>{tache.lien_angenda}</span>
+        </p>
         {index < taches.length - 1 && <hr className="my-2" />}
       </Dropdown.Item>
     ));
@@ -78,18 +86,12 @@ function Headers({ toggleSidebar }) {
           />
           <span className='text-primary ms-2' style={{ fontSize: '1.5rem', fontWeight: '350' }}>CRM</span>
         </a>
+        {/* Utilisation de l'icône Bootstrap pour le toggle */}
         <i 
-          className='bi bi-list toggle-sidebar-btn text-dark' 
+          className='bi bi-list toggle-sidebar-btn text-dark fs-3' 
           style={{ cursor: 'pointer' }} 
           onClick={toggleSidebar}
-        >
-          <img 
-            src="/Image1.png" 
-            alt="Logo" 
-            style={{ width: 100, height: 85 }}
-            className='mt-2' 
-          />
-        </i> 
+        ></i>
       </div>
 
       <nav className="header-nav">
