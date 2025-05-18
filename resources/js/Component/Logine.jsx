@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';  // Assurez-vous d'avoir aussi inclus le JS Bootstrap
-import logoLogine from './Image/Image1.png';
 import './Logine.css';
 import axios from 'axios';
 
@@ -66,7 +65,7 @@ export default function Logine() {
                                     <div className="card-body">
                                         <div className="pt-4 pb-2">
                                             <div className="d-flex justify-content-center py-4">
-                                                <img src={logoLogine} alt="Logo" style={{ width: 90, height: 70, borderRadius: 55 }} />
+                                               <img src="/crm-logo.png" alt="Logo" style={{ width: 100, height: 65 }} />
                                             </div>
                                             <h5 className="card-title text-center pb-0 fs-4 text-dark">Login</h5>
                                             <p className="text-center pb-0 fs-2 text-dark">CRM</p>
