@@ -65,7 +65,7 @@ export default function Logine() {
                                     <div className="card-body">
                                         <div className="pt-4 pb-2">
                                             <div className="d-flex justify-content-center py-4">
-                                               <img src="/crm-logo.png" alt="Logo" style={{ width: 100, height: 65 }} />
+                                                <img src="/Image1.png" alt="Logo" className='mt-2' style={{ width: 90, height: 70, borderRadius: 55 }} />
                                             </div>
                                             <h5 className="card-title text-center pb-0 fs-4 text-dark">Login</h5>
                                             <p className="text-center pb-0 fs-2 text-dark">CRM</p>
