@@ -1,4 +1,5 @@
 // resources/js/App.jsx
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './Component/Logine'; // Import de la page Login
