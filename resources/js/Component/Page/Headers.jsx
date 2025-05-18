@@ -76,6 +76,7 @@ function Headers({ toggleSidebar }) {
           ) : (
             <FaBars size={30} className="text-dark" />
           )}
+            <img src="/Image1.png" alt="Logo" style={{width: 100, height: 85}} className='mt-2' />
         </div>
       </div>
 
@@ -92,7 +93,7 @@ function Headers({ toggleSidebar }) {
                 {newTasks.length > 0 && (
                   <span className="badge bg-danger badge-number">{newTasks.length}</span>
                 )}
-                  <img src="/images/Image1.png" alt="Logo" style={{width: 100, height: 85}} className='mt-2' />
+                  
               </Dropdown.Toggle>
 
               <Dropdown.Menu align="end" className="notifications p-0">
