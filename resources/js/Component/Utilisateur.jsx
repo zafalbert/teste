@@ -188,10 +188,10 @@ const confirmDelete = (user) => {
                                 <td>{users.role}</td>
                                 <td>{users.entreprise}</td>
                                 <td className='d-flex ms-1'>
-                                    <button className="btn btn-sm btn-outline-primary ms-1" onClick={() => handleEditUser(user)}>
+                                    <button className="btn btn-sm btn-outline-primary ms-1" onClick={() => handleEditUser(users)}>
                                         <FaPenAlt />
                                     </button>
-                                    <button className="btn btn-sm btn-outline-danger ms-2" onClick={() => confirmDelete(user)}>
+                                    <button className="btn btn-sm btn-outline-danger ms-2" onClick={() => confirmDelete(users)}>
                                         <FaTrashAlt />
                                     </button>           
                                 </td>
