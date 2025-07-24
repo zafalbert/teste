@@ -53,11 +53,11 @@ export default function Utilisateur({ onNewTaskAdded }) {
     }, [users, searchQuery]); 
 
     useEffect(() => {
-        if(!selecteUser){
+        if(!selectedUser){
             setShowPasswordField(true)
         }
         fetchUsers();
-    }, [selecteUser]);
+    }, [selectedUser]);
 
     const fetchUsers = async () => {
         try {
@@ -139,6 +139,7 @@ export default function Utilisateur({ onNewTaskAdded }) {
     const handleShow = () => {
         setShowModal(true);
         setSelectedUser(null);
+        setShowPasswordField(true); 
     };
 // Fonction pour ouvrir la boîte de confirmation avant suppression
 const confirmDelete = (user) => {
