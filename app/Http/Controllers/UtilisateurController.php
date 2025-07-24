@@ -29,7 +29,7 @@ class UtilisateurController extends Controller
             'email' => $validatedData['email'],
             'role' => $validatedData['role'],
             'entreprise' => $validatedData['entreprise'],
-            'password' => Hash::make($validatedData['password']),
+            'password' => isset($validatedData['password']) ? Hash::make($validatedData['password']) : $user->password,
         ]);
 
 
