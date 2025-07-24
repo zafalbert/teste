@@ -53,8 +53,11 @@ export default function Utilisateur({ onNewTaskAdded }) {
     }, [users, searchQuery]); 
 
     useEffect(() => {
+        if(!selecteUser){
+            setShowPasswordField(true)
+        }
         fetchUsers();
-    }, []);
+    }, [selecteUser]);
 
     const fetchUsers = async () => {
         try {
@@ -67,8 +70,12 @@ export default function Utilisateur({ onNewTaskAdded }) {
     };
 
     const handleSubmit = async () => {
+        setError('');
+         if (!newUser.name || !newUser.email || !newUser.role || !newUser.entreprise || (!selectedUser && (!newUser.password || newUser.password.length < 8))) {
+        setError("Tous les champs sont obligatoires, y compris un mot de passe de 8 caractères minimum.");
+        return;
+    }
         try {
-            setError('');
             if (selectedUser) {
                 // Mise à jour d'un utilisateur existant
                 await updateUser();
@@ -81,6 +88,8 @@ export default function Utilisateur({ onNewTaskAdded }) {
         } catch (error) {
             if (error.response && error.response.status === 422) {
                 setError(error.response.data.message);
+                const firstMessage = Object.values(messages)[0][0];
+                setError(firstMessage);
             } else {
                 setError("Une erreur est survenue lors de l'opération");
             }
